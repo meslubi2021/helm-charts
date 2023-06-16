@@ -213,6 +213,10 @@ api:
   #     mountPath: /path/in/container
 
 job:
+  # -- Cloud Pricing API image
+  image: infracost/cloud-pricing-api
+  # -- Overrides the image tag whose default is the chart appVersion.
+  tag: ""
   # -- Run the job as a one-off on deploy
   runInitJob: true
   # -- Job backoff limit
