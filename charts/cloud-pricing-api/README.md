@@ -124,6 +124,7 @@ The best way to get instructions for configuring Infracost to use the self-hoste
 | job.extraVolumeMounts | list | `[]` | Optionally specify additional volume mounts for the container |
 | job.extraVolumes | list | `[]` | Optionally specify additional volumes |
 | job.failedJobsHistoryLimit | int | `5` | History limit for failed jobs |
+| job.image | string | `"infracost/cloud-pricing-api"` | Cloud Pricing API image |
 | job.logLevel | string | `"info"` | Set this to debug, info, warn or error |
 | job.nodeSelector | object | `{}` | Job node selector |
 | job.resources | object | `{"limits":{"cpu":"200m","memory":"640Mi"},"requests":{"cpu":"50m","memory":"128Mi"}}` | Job resource limits and requests. If you are running on environments like Minikube you may wish to remove these recommendations. |
@@ -131,6 +132,7 @@ The best way to get instructions for configuring Infracost to use the self-hoste
 | job.schedule | string | `"0 4 * * SUN"` | Job schedule |
 | job.startingDeadlineSeconds | int | `3600` | Deadline seconds for the job starting |
 | job.successfulJobsHistoryLimit | int | `5` | History limit for successful jobs |
+| job.tag | string | `""` | Overrides the image tag whose default is the chart appVersion. |
 | job.tolerations | list | `[]` | Job tolerations |
 | job.ttlSecondsAfterFinished | int | `nil` | Marks the jobs as eligible for automatic cleanup after the job has finished and the TTL has expired, whether the job is successful or failed. This avoids the need to delete the init job before upgrading the Helm chart. |
 | nameOverride | string | `""` | Name override for the deployed app |
